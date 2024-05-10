@@ -4,9 +4,9 @@ Atividade prática de Front-End para treinar manipulação de datas em JavaScrip
 **Manipulação de Datas**  
 Este é um programa simples desenvolvido em HTML, CSS e JavaScript que permite realizar algumas operações de manipulação de datas, incluindo:  
 
-1- Exibir a maior data entre duas datas fornecidas.  
-2- Calcular o intervalo entre duas datas fornecidas.  
-3- Exibir a data atual no formato dia/mês/ano.  
+1. Exibir a maior data entre duas datas fornecidas.  
+2. Calcular o intervalo entre duas datas fornecidas.  
+3. Exibir a data atual no formato dia/mês/ano.  
 
 **Como Usar**  
 Para utilizar o programa, basta abrir o arquivo index.html em um navegador da web. Você será apresentado com uma interface que permite inserir duas datas e executar as operações mencionadas acima.
@@ -31,9 +31,8 @@ Esta operação exibe a data atual no formato dia/mês/ano.
 1. maiorData(date1, date2)
    Esta função recebe dois parâmetros do tipo Date e retorna o maior deles.
 
-3. calcularIntervalo(date1, date2)
-   Esta função recebe dois parâmetros do tipo Date e calcula o intervalo entre as datas. O primeiro parâmetro sempre deve ser mais antigo que o segundo. Caso contrário, a função retornará um erro.  ff d 
-O intervalo é calculado em dias e é retornado como uma string.  
+3. calcularIntervalo(date1, date2)  
+   Esta função recebe dois parâmetros do tipo Date e calcula o intervalo entre as datas. O primeiro parâmetro sempre deve ser mais antigo que o segundo. Caso contrário, a função retornará um erro. O intervalo é calculado em dias e é retornado como uma string.  
 
 5. dataAtual() -> Essa função retorna a data atual no formato: dia/mês/ano.  
 
