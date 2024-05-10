@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulação de Datas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -17,63 +19,5 @@
         <button onclick="exibirIntervalo()">Exibir Intervalo</button>
         <button onclick="exibirDataAtual()">Exibir Data Atual</button>
     </div>
-
-    <script>
-        function exibirMaiorData() {
-            let data1 = new Date(document.getElementById("data1").value);
-            let data2 = new Date(document.getElementById("data2").value);
-
-            // Ajusta as datas para considerar o fuso horário local
-            data1.setTime(data1.getTime() + data1.getTimezoneOffset() * 60 * 1000);
-            data2.setTime(data2.getTime() + data2.getTimezoneOffset() * 60 * 1000);
-
-            let resultado = maiorData(data1, data2);
-            document.getElementById("resultado").innerText = "Maior data: " + resultado;
-        }
-
-        function exibirIntervalo() {
-            let data1 = new Date(document.getElementById("data1").value);
-            let data2 = new Date(document.getElementById("data2").value);
-
-            // Ajusta as datas para considerar o fuso horário local
-            data1.setTime(data1.getTime() + data1.getTimezoneOffset() * 60 * 1000);
-            data2.setTime(data2.getTime() + data2.getTimezoneOffset() * 60 * 1000);
-
-            let resultado = calcularIntervalo(data1, data2);
-            document.getElementById("resultado").innerText = "Intervalo entre as datas: " + resultado;
-        }
-
-        function exibirDataAtual() {
-            let resultado = dataAtual();
-            document.getElementById("resultado").innerText = "Data atual: " + resultado;
-        }
-
-        function maiorData(date1, date2) {
-            return date1 > date2 ? date1 : date2;
-        }
-
-        function calcularIntervalo(date1, date2) {
-            if (date1 > date2) {
-                let temp = date1;
-                date1 = date2;
-                date2 = temp;
-            }
-
-            let diffMs = date2 - date1;
-            let diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-            return diffDays + " dias";
-        }
-
-        function dataAtual() {
-            let now = new Date();
-            let dia = now.getDate();
-            let mes = now.getMonth() + 1; // Meses são indexados de 0 a 11
-            let ano = now.getFullYear();
-            let hora = now.getHours();
-            let minuto = now.getMinutes();
-            let dataFormatada = `${hora}:${minuto} - ${dia}/${mes}/${ano}`;
-            return dataFormatada;
-        }
-    </script>
 </body>
 </html>
