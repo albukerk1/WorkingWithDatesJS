@@ -34,7 +34,7 @@ Esta operação exibe a data atual no formato dia/mês/ano.
 Esta função recebe dois parâmetros do tipo Date e retorna o maior deles.
 
 2. calcularIntervalo(date1, date2)  
-Esta função recebe dois parâmetros do tipo Date e calcula o intervalo entre as datas. O primeiro parâmetro sempre deve ser mais antigo que o segundo. Caso contrário, a função retornará um erro. O intervalo é calculado em dias e é retornado como uma string.  
+Esta função recebe dois parâmetros do tipo Date e calcula o intervalo entre as datas. O primeiro parâmetro sempre deve ser mais antigo que o segundo, por isso a função começa verificando se date1 é maior que date2, trocando as datas ou não. O intervalo é calculado em dias e é retornado como uma string.  
 
 6. dataAtual()  
 Essa função retorna a data atual no formato: dia/mês/ano.  
